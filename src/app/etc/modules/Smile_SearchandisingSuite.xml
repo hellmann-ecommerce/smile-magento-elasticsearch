@@ -18,6 +18,28 @@
 <config>
     <modules>
 
+        <Smile_SearchandisingSuite>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Smile_SearchandisingSuite>
+        
+        <Smile_ElasticSearch>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_CatalogSearch />
+                <Smile_SearchandisingSuite />
+            </depends>
+        </Smile_ElasticSearch>        
+        
+        <!--Smile_Tracker>
+            <active>false</active>
+            <codePool>community</codePool>
+            <depends>
+                <Smile_SearchandisingSuite />
+            </depends>
+        </Smile_Tracker>
+        
         <Enterprise_Search>
             <active>false</active>
             <codePool>core</codePool>
@@ -33,36 +55,14 @@
                 <Mage_CatalogSearch/>
             </depends>
         </OnTap_Merchandiser>
-
-        <Smile_SearchandisingSuite>
-            <active>true</active>
-            <codePool>community</codePool>
-        </Smile_SearchandisingSuite>
-        
-        <Smile_Tracker>
-            <active>true</active>
-            <codePool>community</codePool>
-            <depends>
-                <Smile_SearchandisingSuite />
-            </depends>
-        </Smile_Tracker>
-        
-        <Smile_ElasticSearch>
-            <active>true</active>
-            <codePool>community</codePool>
-            <depends>
-                <Mage_CatalogSearch />
-                <Smile_SearchandisingSuite />
-            </depends>
-        </Smile_ElasticSearch>
         
         <Smile_VirtualCategories>
-            <active>true</active>
+            <active>false</active>
             <codePool>community</codePool>
             <depends>
                 <Smile_ElasticSearch />
             </depends>
-        </Smile_VirtualCategories>
+        </Smile_VirtualCategories-->
 
     </modules>
 </config>

@@ -26,19 +26,18 @@
             <action method="setTemplate"><template>smile/elasticsearch/autocomplete/form.mini.phtml</template></action>
         </reference>
     </default>
-
-    <catalog_category_layered>
+    
+    <!-- MP: Needs more work to be done so disabled for now -->
+    <!--catalog_category_layered>
         <reference name="left">
             <remove name="catalog.leftnav"/>
             <block type="smile_elasticsearch/catalog_layer_view" name="smile.elaticsearch.leftnav" before="-" template="catalog/layer/view.phtml">
-                <!--
-                Example of custom template for a filter :
-                -->  
+
                 <action method="addFilterTemplate"><filterName>price</filterName><template>smile/elasticsearch/catalog/layer/filter/price.phtml</template></action>
                 <action method="addFilterTemplate"><filterName>rating_filter</filterName><template>smile/elasticsearch/catalog/layer/filter/rating.phtml</template></action>
             </block>
         </reference>
-    </catalog_category_layered>
+    </catalog_category_layered-->
     
     <catalogsearch_result_index>
         <reference name="additional">
@@ -48,9 +47,7 @@
         <reference name="left">
             <remove name="catalogsearch.leftnav"/>
             <block type="smile_elasticsearch/catalogsearch_layer" name="smile.elaticsearch.leftnav" before="-" template="catalog/layer/view.phtml">
-                <!--
-                Example of custom template for a filter :
-                -->
+
                 <action method="addFilterTemplate"><filterName>price</filterName><template>smile/elasticsearch/catalog/layer/filter/price.phtml</template></action>
                 <action method="addFilterTemplate"><filterName>rating_filter</filterName><template>smile/elasticsearch/catalog/layer/filter/rating.phtml</template></action>
             </block>
@@ -58,7 +55,7 @@
         <reference name="content">
             <remove name="search.result" />
             <block type="smile_elasticsearch/catalogsearch_result" name="smile.elaticsearch.search.result" template="catalogsearch/result.phtml">
-                <block type="catalog/product_list" name="search_result_list" template="catalog/product/list.phtml">
+                <block type="catalog/product_list" name="search_result_list" template="hellmann/advancedfilter/catalog/product/list.phtml">
                     <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
                         <block type="page/html_pager" name="product_list_toolbar_pager"/>
                     </block>

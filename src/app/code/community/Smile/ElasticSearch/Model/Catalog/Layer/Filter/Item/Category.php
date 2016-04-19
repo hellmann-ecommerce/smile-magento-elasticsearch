@@ -16,7 +16,7 @@
  * @copyright 2013 Smile
  * @license   Apache License Version 2.0
  */
-class Smile_ElasticSearch_Model_Catalog_Layer_Filter_Item_Category extends Mage_Catalog_Model_Layer_Filter_Item
+class Smile_ElasticSearch_Model_Catalog_Layer_Filter_Item_Category extends Hellmann_AdvancedFilter_Model_Catalog_Layer_Filter_Item
 {
     /**
      * Allow to keep some filter active when changing category

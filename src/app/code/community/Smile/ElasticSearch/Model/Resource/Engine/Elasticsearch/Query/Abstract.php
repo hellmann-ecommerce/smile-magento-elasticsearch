@@ -215,10 +215,12 @@ abstract class Smile_ElasticSearch_Model_Resource_Engine_Elasticsearch_Query_Abs
             Mage::log(json_encode($query), Zend_Log::DEBUG, 'es-queries.log');
         }
 
+        // @TODO: Implement exception handler
         Varien_Profiler::start('ES:EXECUTE:QUERY');
         $response = $this->getClient()->search($query);
         Varien_Profiler::stop('ES:EXECUTE:QUERY');
-
+        // @ENDTODO
+        
         if (!isset($response['error'])) {
             $result = array(
                 'total_count'  => $response['hits']['total'],
